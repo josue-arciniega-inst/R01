@@ -1,0 +1,82 @@
+Title         :  ![poli]<br> IPN-UPIITA  
+Sub Title     : Redes Neuronales
+Title Note    : Reporte R01
+Author        : Dr. Rafael Martínez Martínez
+Affiliation   : Academia de sistemas
+Email         : ramartinezr@ipn.mx
+Logo          : False
+Bibliography: bibliografia.bib
+Bib style     : chicago
+Cite Style: natural
+Math Mode: static
+Math Embed: 100
+Math Dpi: 299
+@html Bib Search Url: www.google.com
+
+Math {overflow:scroll}
+Equation {overflow:scroll}
+
+name-references: Bibliografía
+name-contents: Contenido
+
+name-theorem: Teorema
+
+Locale: (spanish)
+
+
+Doc class     : [10pt]article
+
+[TITLE] 
+
+
+___
+Instrucciones:<br>
+  ~  + Cada problema/ejercicio debe tener procedimiento ordenado y completo que justifique adecuadamente la respuesta anotada. <br>
+  ~  + Si falta el procedimiento o este no justifica la respuesta anotada entonces el problema vale 0 puntos aunque la respuesta sea correcta.
+___
+[TOC]
+
+# Problema 1 (33 puntos) {-}
+
+En la página 1-8  de [Neuronal Networks Desing](https://hagan.okstate.edu/NNDesign.pdf) está una breve introducción de la inspiración biológica[^redes] de las redes neuronales (Biological Inspiration).
+En la página 2-2 de la misma referencia, se encuetra la abstracción mátematica de una neurona (Single-Input Neuron). Con base en esta información y por lo menos una referecnia adicional (redes nuronales para ingeniería, no profundices en el concepto biológico más alla de lo necesario).
+Resume brevemente el proceso biológico básico de una neurona y la abtracción matemática de esta. Anota la(s) referencia(s) consultada(s). 
+
+[^redes]: Para precisar lo complejo del proceso biologico de las redes neuronales se puede consultar [sinapsis química](https://youtu.be/g291rK3NEws), [Potencial de acción](https://youtu.be/wVvt0jQM33c), [Potencial de Membrana en reposo de una neurona](https://youtu.be/zWRFchwqXfM). Para una descripción general de las neuronas se puede consultar [LA NEURONA: Clasificación, estructura y funciones](https://youtu.be/bB19dD2Vjvw) 
+
+# Problema 2 (33 puntos) {-}
+
+Revisa el siguiente video[^video] y responde las preguntas correspondientes
+
+<div>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/jKCQsndqEGQ" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+  [^video]: Si prefieres puedes revisar la versión en inglés [enlace](https://youtu.be/aircAruvnKk)
+
+i. ¿Cuál es el número de entradas de la red expuesta y a qué está asociado este número?
+- ¿Qué representa la salida?
+- De acuerdo a la topología de la red ¿cuántas salidas se tienen?
+- ¿Cuál es el nombre de las redes que se utilizan para reconocimientos de imágenes?
+- ¿Cuál es el nombre de las redes que se utilizan para reconocimientos de voz (habla)?
+- ¿Cuántos parámetros se tienen que encontrar en esta red?
+- Explica porqué se reporta ese número de parámetros. Puedes apoyarte de la operación correspondiente. 
+- ¿Cual es la función de activación que se utiliza? Escribe la expresión de esta función y reporta la gráfica
+- Segun la entrevista a la investigadora Lee ¿cuál es la función de activación que se utiliza para estas redes profundas? Escribe la expresión de está función
+y reporta su gráfica 
+- Resume brevemente el funcionamiento de la red que se explica a lo largo del video 
+
+# Problema 3 (34 puntos) {-}
+
+Ingresa al siguiente curso [Introduction to Machine Learning](https://openlearninglibrary.mit.edu/courses/course-v1:MITx+6.036+1T2019/about)[^mit]. Revisa la información de la semana 1.
+Resuelve los ejercicios sobre hiperplanos[^regreso] (Week 1 Exercises: Hyperplanes). Es necesario decir que no se vale revisar las soluciones &#128516;. 
+Pero si puedes comprabar las veces que sea necesario tu resultado con la herramienta porporcionada en la plataforma &#128512;. 
+La entrega consisten en la solucion de los problemas de hiperplanos. No se supervisa la revisión del material de la semana 1, pero ojalá esta se realice.
+
+
+
+[^mit]: La creación de una cuenta e ingresar al curso es gratis
+[^regreso]: En el futuro regresaras a resolver los problemas relacionados con Python
+[poli]: images/poli.JPG "poli" { width: 10% }
+
+
