@@ -80,7 +80,7 @@ las siguientes preguntas (lo principal es tu reflexión, que no se pide, sobre e
 
 # Problema 2 (50 puntos) {-}
 
-La siguiente [aplicación web][pg], permite elegir graficamene una topologia de red (feedforward) para resolver problemas de
+La siguiente [aplicación web][pg], permite elegir gráficamene una topologia de red (feedforward) para resolver problemas de
 clasificación y regresión prestablecidos.
 
 La Figura [#fig-play] muestra la elección de una topología para resolver un problema (porporcionado en la aplicación) de clasificación. 
@@ -94,8 +94,8 @@ se pueden consultar colocando el puntero sobre las lineas de cada capa.
 
 Si bien se tienen dos entradas en cada problema de clasificación (en esta aplicación), la aplicación nos permite generar 5 entradas adicionales construidas con
 los dos datos de entrada, además tiene la opción de tomar estas entras _artificiales_ como información adicional para entrenar la red. 
-Es decir, se puede pensar que dado un problema con $m$ entradas se puede transforma a un problema de $n+m$ entradas, donde $n$ 
-es el numero de datos construidos _artificialmente_ transformando los $m$ datos iniciales. En el caso de la aplicación $n=5$. 
+Es decir, se puede pensar que dado un problema con $m$ entradas se puede transformar a un problema de $n+m$ entradas, donde $n$ 
+es el número de datos construidos _artificialmente_ transformando los $m$ datos iniciales. En el caso de la aplicación $n=5$. 
 
 Conteste las siguiente preguntas
 
