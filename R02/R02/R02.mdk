@@ -1,0 +1,152 @@
+Title         :  ![poli]<br> IPN-UPIITA  
+Sub Title     : Redes Neuronales
+Title Note    : Reporte R02
+Author        : Dr. Rafael Martínez Martínez
+Affiliation   : Academia de sistemas
+Email         : ramartinezr@ipn.mx
+Logo          : False
+Bibliography: bibliografia.bib
+Bib style     : chicago
+Cite Style: natural
+Math Mode: static
+Math Embed: 100
+Math Dpi: 299
+@html Bib Search Url: www.google.com
+
+Math {overflow:scroll}
+Equation {overflow:scroll}
+
+name-references: Bibliografía
+name-contents: Contenido
+name-figure: Figura
+
+name-theorem: Teorema
+
+Locale: (spanish)
+
+
+Doc class     : [10pt]article
+
+[TITLE] 
+
+
+___
+Instrucciones:<br>
+  ~  + Cada problema/ejercicio debe tener procedimiento ordenado y completo que justifique adecuadamente la respuesta anotada. <br>
+  ~  + Si falta el procedimiento o este no justifica la respuesta anotada entonces el problema vale 0 puntos aunque la respuesta sea correcta.
+___
+[TOC]
+
+# Problema 1 (10 puntos) {-}
+
+> Walter Pitts salio de las calles al MIT, pero no pudo escapar de sí mismo. \
+> &emsp;
+
+>  La vida de Walter Pitts pasó de un vagabundo fugitivo, a pionero de la neurociencia del MIT, a alcohólico retraído.
+
+
+En 1943 Warren McCulloch y Walter Pitts introdujeron una de las primeras neuronas artificiales. La referencia de dicho trabajo es la siguiente:
+
+_W. McCulloch and W. Pitts, “A logical calculus of the ideas immanent in nervous activity,” Bulletin of Mathematical Biophysics, Vol. 5, pp. 115–133, 1943._
+
+Este articulo introduce el primer modelo matemático de una neurona, en la cual la suma ponderada de las señales de entrada es comparada con un umbral que determina la salida de la neurona. Cuando la suma es más grande o igual al umbral, la salida es $1$. Cuando la suma es menor al umbral, la salida es $0$. A diferencia de las redes biológicas, los parámetros de su red (pesos) se tenían que diseñar y no proporcionaron un método de entrenamiento. Sin embargo, fue el precedente sobre un campo interesante entre la conexión de la biología y las computadoras digitales. 
+
+A finales de la década de los 50`s del siglo pasado, Frank Rosenblatt y otros investigadores desarrollaron una clase de redes neuronales llamada perceptrones:
+
+_F. Rosenblatt, “The perceptron: A probabilistic model for information storage and organization in the brain,” Psycho- logical Review, Vol. 65, pp. 386–408, 1958._ 
+
+Su modelo era parecido al de McCulloch y Pitts, pero además proponían una regla de aprendizaje para resolver el problema de reconocimiento de patrones. Posteriormente se mostró que este aprendizaje estaba limitado a resolver problemas de reconocimiento linealmente separables. Y no fue hasta la década de los 80`s del siglo pasado, que esta limitación se resolvió utilizando múltiples capas de perceptrones. 
+
+La colaboración de Warren McCulloch y Walter Pitts va más allá de la profesional. 
+En el artículo de divulgación [The Man Who Tried to Redeem the World with Logic][pitts], 
+se resume un poco de la desgarradora vida de Pitts. En la lectura se podrá observar como Pitts 
+colaboró con algunas de las grandes mentes del siglo XX. Para este problema es necesario realizar 
+la lectura del articulo de divulgación mencionado. Para el control de dicha lectura, se responden 
+las siguientes preguntas (lo principal es tu reflexión, que no se pide, sobre el contenido de la lectura):
+
+
+1. ¿Qué edad tenia Pitts cuando le escribió a  Bertrand Russell sobre los errores en su libro?
+- ¿Quién presento a Pitts con McCulloch?
+- ¿Quienes conformaban el núcleo del grupo conocido como _los cibernéticos_?
+- ¿Cuál fue el motivo por el cual Norbert Wiener dejo de tener comunicación con Pitts?
+- ¿Cuáles fueron los eventos que llevaron a Pitts a hundirse en depresión, y quemar su tesis doctoral y sus escritos?
+- ¿Consideras que si Pitts hubiera tenido una situación diferente a la que tuvo en el lugar donde nacio, podría haber superado los eventos que lo llevaron a la depresión? Explica
+
+
+   [pitts]: https://nautil.us/issue/21/information/the-man-who-tried-to-redeem-the-world-with-logic
+
+
+
+
+# Problema 2 (20 puntos) {-}
+
+La siguiente [aplicación web][pg], permite elegir graficamene una topologia de red (feedforward) para resolver problemas de
+clasificación y regresión prestablecidos.
+
+La Figura [#fig-play] muestra la elección de una topología para resolver un problema (porporcionado en la aplicación) de clasificación. 
+Se han elegido algunas capas ocultas[^capas] y los demás parámetros de la red. 
+Al comenzar en entrenamiento y deternerlo después de 143 epocas, los valores de los pesos
+se pueden consultar colocando el puntero sobre las lineas de cada capa.  
+
+~ Figure { #fig-play; caption: "Red elegida par resolver el problema de clasificación indicado"}
+ ![play] 
+~
+
+Si bien se tienen dos entradas en cada problema de clasificación (en esta aplicación), la aplicación nos permite generar 5 entradas adicionales construidas con
+los dos datos de entrada, además tiene la opción de tomar estas entras _artificiales_ como información adicional para entrenar la red. 
+Es decir, se puede pensar que dado un problema con $m$ entradas se puede transforma a un problema de $n+m$ entradas, donde $n$ 
+es el numero de datos construidos _artificialmente_ transformando los $m$ datos iniciales. En el caso de la aplicación $n=5$. 
+
+Conteste las siguiente preguntas
+
+1. ¿A qué se refiere que una red sea feedforward?
+- ¿Cuantos problemas de clasificación y cuantos de regresión tiene prestablecidos la aplicación?
+- Investiga a que se refieren los siguientes elementos que aparecen en la aplicación[^np]:
+   i. Learning rate
+   - Regularization
+   - Regularization rate
+   - Radio of training to test data
+   - Batch size
+   - Test loss
+   - Training loss 
+- Es claro que la topologia elegida en la Figura [#fig-play] _está sobrada_. Pues tenemos un problema de clasificación 
+linealmente separable. Resuelve este problema con una capa, una neurona, las dos estradas _naturales_,
+ y la elección de tu preferencia de los demás 
+parámetros (función de activación, Learnin rate, etc.), no es necesario justificar la elección de los parámetros. 
+   i. Solo reporta la imagen correspondiente, donde se pueda apreciar 
+que se llevó acabo el entrenamiento de forma exitosa. 
+   - ¿Cuántas epocas de entrenamiento fueron necesarias (para esto utiliza el boton a un costado de _play_)?
+- __Juega con la aplicación__. Resuelve los problemas de clasificación restantes, utilizando la menor cantidad de capas posibles y
+ la menor cantidad de neuronas posibles en cada capa[^sen].
+ Todos los demás parámetros se pueden elegir a tu consideración 
+(entradas, función de activación, Learnin rate, etc.) no es necesario justificar la elección de los parámetros.
+ Reporta solo las imagenes correspondientes, donde se pueda apreciar 
+que se llevó acabo el entrenamiento de forma exitosa. 
+
+  [pg]: http://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,2&seed=0.12132&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false
+  [play]: images/playground.png  { width: 100% }
+
+  [^capas]: Por el momento pensemos que si se tiene más de una capa, el entrenamiento se lleva acabo de alguna manera, que por el momento no nos importa especificar. 
+  [^np]: Explicación breve, si lo consideras necesario anota ecuaciónes como ejemplo
+    [^sen]: Varias topologias resolverán el problema, queremos la más secilla que puedas construir, en este caso nos referimos a sencilla en el sentido de minimizar el numero de capas y neuronas  
+
+# Problema 3 (70 puntos) {-}
+
+Ingresa al siguiente curso [Introduction to Machine Learning](https://openlearninglibrary.mit.edu/courses/course-v1:MITx+6.036+1T2019/about)[^mit]. 
+Revisa la información ubicada en  Week 2: Perceptrons. Es necesario decir que no se vale revisar las soluciones &#128516;. 
+Pero si puedes comprobar las veces que sea necesario tu resultado con la herramienta proporcionada en la plataforma &#128512;.
+No se supervisa la revisión del material indicado, pero ojalá esta se realice.
+
+La entrega consiste en 
+
+a. Reproduce la demostración del algoritmo de convergencia _Theorem 3.1 (Perceptron Convergence)_, se
+encuentra en las notas del capítulo 3. Es necesario indicar que se hace en cada paso, 
+de ser necesario busca información adicional para justificar los pasos
+a. Resuelve la tarea de la semana 2 (Week 2 Homework), del ejercicio 1 a 6[^regreso]. Se adjunta la revisión automática
+de la plataforma al archivo de one note.  
+
+[^mit]: La creación de una cuenta e ingresar al curso es gratis
+[^regreso]: En el futuro regresaras a resolver los problemas relacionados con Python
+[poli]: images/poli.JPG "poli" { width: 10% }
+
+
