@@ -1,0 +1,72 @@
+Title         :  ![poli]<br> IPN-UPIITA  
+Sub Title     : Redes Neuronales
+Title Note    : Reporte R03
+Author        : Dr. Rafael Martínez Martínez
+Affiliation   : Academia de sistemas
+Email         : ramartinezr@ipn.mx
+Logo          : False
+Bibliography: bibliografia.bib
+Bib style     : chicago
+Cite Style: natural
+Math Mode: static
+Math Embed: 100
+Math Dpi: 299
+@html Bib Search Url: www.google.com
+
+Math {overflow:scroll}
+Equation {overflow:scroll}
+
+name-references: Bibliografía
+name-contents: Contenido
+name-figure: Figura
+
+name-theorem: Teorema
+
+Locale: (spanish)
+
+
+Doc class     : [10pt]article
+
+[TITLE] 
+
+
+________
+Instrucciones:<br>
+  ~  + Cada problema/ejercicio debe tener procedimiento ordenado y completo que justifique adecuadamente la respuesta anotada. <br>
+  ~  + Si falta el procedimiento o este no justifica la respuesta anotada entonces el problema vale 0 puntos aunque la respuesta sea correcta.
+
+________
+
+[TOC]
+
+
+
+# Problema 1 (100 puntos){-} 
+
+En el articulo: [Multilayer feedforward networks are universal approximators][aproxf]. Se muestra que las redes feedforward 
+(ya sabemos que es esto &#9989;) multicapa, son una clase de aproximadores universales de funciones. A grandes razgos,
+esto significa que una red puede aprender a comportarse como cualquier función $f$, donde la entrada de la red 
+serián valores del dominio de f, y la salida de la red sería una aproximación al contradomino de dichos valores 
+(ya entrenada la red). 
+
+
+Entender el articulo podría llevar algo de tiempo, tanto para revisar el background requerido así como entender los argumentos de dicha prueba.
+En la sección **Function Approximation** (página 11-4) Hagan nos muestra un ejemplo de dicho fenómeno.
+
+Cabe señalar que el ejemplo de Hagan, es muy particular y simplificado, lo cual puede ser suficente para ilustrar dicho fenómeno. Otros
+ejemplos más elaborados al respecto se pueden revisar en [A visual proof that neural nets can compute any function][anyf] elaborado por 
+[Michael Nielsel](https://michaelnielsen.org/)
+
+Este problema consiste en elaborar una explicación del fenómeno mencionado, apoyado de los enlaces proporcionados (y/u otros). 
+No es necesario incluir cuestiones técnicas del articulo, pero se espera que Hagan sea un punto de referencia y que
+ tomes algunas ideas (gráficas, argumentos, etc.) de Nielsen y si lo consideras necesario de otras referencias (no olvides
+ indicarlas) 
+
+
+  [aproxf]: https://www.cs.cmu.edu/~epxing/Class/10715/reading/Kornick_et_al.pdf
+  [anyf]: http://neuralnetworksanddeeplearning.com/chap4.html
+
+
+[poli]: images/poli.JPG "poli" { width: 10% }
+
+
