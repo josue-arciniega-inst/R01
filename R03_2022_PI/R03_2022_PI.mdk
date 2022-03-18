@@ -39,8 +39,6 @@ ________
 
 [TOC]
 
-
-
 # Problema 1 (100 puntos){-} 
 
 En el articulo: [Multilayer feedforward networks are universal approximators][aproxf]. Se muestra que las redes feedforward 
@@ -61,7 +59,6 @@ Este problema consiste en elaborar una explicación del fenómeno mencionado, ap
 No es necesario incluir cuestiones técnicas del articulo, pero se espera que Hagan sea un punto de referencia y que
  tomes algunas ideas (gráficas, argumentos, etc.) de Nielsen y si lo consideras necesario de otras referencias (no olvides
  indicarlas) 
-
 
   [aproxf]: https://www.cs.cmu.edu/~epxing/Class/10715/reading/Kornick_et_al.pdf
   [anyf]: http://neuralnetworksanddeeplearning.com/chap4.html
