@@ -39,7 +39,7 @@ ________
 
 [TOC]
 
-# Problema 1 (100 puntos){-} 
+# Problema 1 (50 puntos){-} 
 
 En el articulo: [Multilayer feedforward networks are universal approximators][aproxf]. Se muestra que las redes feedforward 
 (ya sabemos que es esto &#9989;) multicapa, son una clase de aproximadores universales de funciones. A grandes razgos,
@@ -60,9 +60,15 @@ No es necesario incluir cuestiones técnicas del articulo, pero se espera que Ha
  tomes algunas ideas (gráficas, argumentos, etc.) de Nielsen y si lo consideras necesario de otras referencias (no olvides
  indicarlas) 
 
+
+# Problema 2 (50 puntos){-} 
+Revisa el siguiente video [Universal Approximation-CIS 522 - Deep Learning at the University of Pennsylvania][prob2]
+y realiza el ejercicio mencionado al final del video (consiste en aproximar un periodo de la función seno($\pi x$), mediante funciones ReLU) calcular
+el error en función del número de segmentos usados para la aproximación).
+
   [aproxf]: https://www.cs.cmu.edu/~epxing/Class/10715/reading/Kornick_et_al.pdf
   [anyf]: http://neuralnetworksanddeeplearning.com/chap4.html
-
+  [prob2]: https://www.youtube.com/watch?v=XXXYxolMVdw
 
 [poli]: images/poli.JPG "poli" { width: 10% }
 
