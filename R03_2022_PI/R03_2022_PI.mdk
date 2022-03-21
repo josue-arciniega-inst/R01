@@ -62,7 +62,7 @@ No es necesario incluir cuestiones técnicas del articulo, pero se espera que Ha
 # Problema 2 (50 puntos){-} 
 Revisa el siguiente video [Universal Approximation-CIS 522 - Deep Learning at the University of Pennsylvania][prob2]
 y realiza el ejercicio mencionado al final del video (consiste en aproximar un periodo de la función seno($\pi x$), mediante funciones ReLU) calcular
-el error en función del número de segmentos usados para la aproximación y plotearlo).
+el error en función del número de segmentos usados para la aproximación y plotearlo usando MATLAB/OCTAVE/PYTHON/OTRO).
 
   [aproxf]: https://www.cs.cmu.edu/~epxing/Class/10715/reading/Kornick_et_al.pdf
   [anyf]: http://neuralnetworksanddeeplearning.com/chap4.html
