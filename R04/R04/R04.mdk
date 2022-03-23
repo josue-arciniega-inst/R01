@@ -1,0 +1,171 @@
+Title         :  ![poli]<br> IPN-UPIITA  
+Sub Title     : Redes Neuronales
+Title Note    : Reporte R04
+Author        : Dr. Rafael Martínez Martínez
+Affiliation   : Academia de sistemas
+Email         : ramartinezr@ipn.mx
+Logo          : False
+Bibliography: bibliografia.bib
+Bib style     : chicago
+Cite Style: natural
+Math Mode: static
+Math Embed: 100
+Math Dpi: 299
+@html Bib Search Url: www.google.com
+
+Math {overflow:scroll}
+Equation {overflow:scroll}
+
+name-references: Bibliografía
+name-contents: Contenido
+name-figure: Figura
+
+name-theorem: Teorema
+
+Locale: (spanish)
+
+
+Doc class     : [10pt]article
+
+[TITLE] 
+
+
+___
+Instrucciones:<br>
+  ~  + Cada problema/ejercicio debe tener procedimiento ordenado y completo que justifique adecuadamente la respuesta anotada. <br>
+  ~  + Si falta el procedimiento o este no justifica la respuesta anotada entonces el problema vale 0 puntos aunque la respuesta sea correcta.
+___
+
+[TOC]
+
+
+# Problema 1 (50 puntos){-}
+
+
+~ Figure { #fig-R04_1; caption: "Trayectoria del momentum" }
+![R04_1]
+~
+
+
+
+La Figura [#fig-R04_1] fue tomada del articulo: [Why Momentum Really Works][momentum]. La Figura [#fig-R04_1]  muestra la trayectoria de la sucesión
+de búsqueda del mínimo para una función cuadrática (no especificada) y un punto inicial (interactivo). En particular la trayectoria es la generada 
+por el algoritmo de __momentum__ para sus parámetros[^nota1] $\alpha = 0.003$ (Step-size) y $\beta = 0.75$ (momentum).
+La entrega consiste en responder preguntas respecto a la primer parte del articulo[^nota]. Lo ideal es que dieras una primer lectura a todo la información
+y después contestaras regresando a la información especifica de la pregunta.
+
+i. Sin mover el punto de inicio. Reporta gráficas para las Figuras generadas por al aplicacion para los siguientes casos
+
+   a. $\alpha = 0.003$ y $\beta = 0$ 
+   a. $\alpha = 0.003$ y $\beta = 0.99$
+   a. $\alpha = 0.0035$ y $\beta = 0.75$
+   a. $\alpha = 0.0045$ y $\beta = 0.75$
+   a. $\alpha = 0.0055$ y $\beta = 0.75$
+   
+   ¿Cuáles son tus primeras impresiones al respecto?
+
+i. En los algoritmos vistos en clase hablamos de la _tasa de aprendizaje_ ¿Cuál es el nombre que recibe este parámetro en el articulo?
+i. Anotas las ecuaciones que se refieren al algoritmo de momentum. En este punto debería tenerse claro en donde intervienen los parámetros $\alpha$
+y $\beta$ antes utilizados.
+i. ¿Qué sucede si en la Figura [#fig-R04_2] el punto de inicio está en la linea de acción del vector propio? Reporta la figura que ilustre esto.
+~ Figure { #fig-R04_2; caption: "Trayectoria de gradiente descendiente" }
+![R04_2]
+~
+i. Para el algoritmo de gradiente descendiente puede caraterizarse el vector de error[^nota2] en cada iteración $k$ en términos de las componentes
+ de la condición inicial, $\alpha$, los valores propios y los vectores propios (se a supuesto una forma cuadrática), es decir
+~ Equation{#eq-error_gd}
+w^{k}-w^{\star}=Q x^{k}=\sum_{i}^{n} x_{i}^{0}\left(1-\alpha \lambda_{i}\right)^{k} q_{i}
+~
+de forma similar, se puede caracterizar al error entre la evaluación de la función en la iteración $k$ y la evaluación en el mínimo
+~ Equation{#eq-error_eva}
+f\left(w^{k}\right)-f\left(w^{\star}\right)=\sum\left(1-\alpha \lambda_{i}\right)^{2 k} \lambda_{i}\left[x_{i}^{0}\right]^{2}
+~
+Explica la Figura [#fig-R04_3] a detalle (todos los elementos gráficos son la ayuda). Puede servir mover los valores del Step-size para 
+entender mejor la gráfica 
+~ Figure { #fig-R04_3; caption: "Geometría del error de evaluación" }
+![R04_3]
+~
+i. ¿Por qué  $|1-\alpha\lambda_i|<1$ garantiza convergencia?  
+i. Explica que es una _tasa_. Hay muhcos contextos para ello, en particular reporta que es la tasa de convergencia de una sucesión 
+(podrías encontrarlo como tasa de convergencia de un algoritmo). La idea es tener claro lo que sigue
+i. Reporta el valor óptimo de $\alpha$ y el valor óptimo de la tasa. Para concluir esta sección se debe tener en mente que cuando
+ $\kappa=\lambda_n/\lambda_1 >> 1$ el algoritmo de gradiente descendiente tiene comportamientos no deseados.  
+ 
+i. Debido al background que tenemos la sección: _ Example: Polynomial Regression_, puede ser difícil de leer, se porporcionan algunos elementos 
+para que lectura sea más digerible. Lo sección es un ejemplo diferente para ilustrar un fenómeno que se desprende de lo abordado en el pregunta v.
+  
+  Si tenemos los polinomios $\{p_1(\xi)=1,p_2(\xi)=\xi,p_3(\xi)=\xi^2\}$, el vector $a(\xi)=-1+2\xi-3\xi^2$, puede ser expresado por el
+   vector de coordenadas $\bar{a}=[-1\,2-3]^T$ en $\mathbb{R}^3$ (como espacios vectoriales son isomorfos). Así se puede hacer la asiciación de bases 
+  $p_1(\xi)\rightarrow [1,0,0]^T$, $p_2(\xi)\rightarrow [0,1,0]^T$ y  $p_2(\xi)\rightarrow [0,0,1]^T$. Así un problema que involucre propiedades de 
+  espacio vectorial en en el espacio de polinomios, puede trasladarse a un problema en $\mathbb{R}^n$, donde $n$ depende del grado del polinomio<br>
+  
+  Supongamos que tenemos las sigueintes mediciones
+~ Center
+| $\xi_i$ (las x) | $d_i$ (las y)|
+|:--------+------:|
+| $-3$      | $-0.95$ |
+| $-2$      | $0.5$   |
+| $-1$      | $0.7$   |
+~ 
+  Supongamos que queremos encontrar la _mejor combinación lineal_ dada por
+  ~ Math
+    \operatorname{model}(\xi)=w_{1} p_{1}(\xi)+w_{2} p_{2}(\xi)+w_{3} p_{3}(\xi) \quad p_{i}=\xi \mapsto \xi^{i-1}
+  ~ 
+  De tal forma que los $w_i$ minimicen la siguiente expresión, esat expresión hace referencia a la suma de los errores al cuadrado entre el valor 
+  observado $d_i$ y el calculado con el modelo propuesto (es este sentido será la mejor combinación lineal) 
+  ~ Math
+    \min_{w} \quad \frac{1}{2} \sum\left(\operatorname{model}\left(\xi_{i}\right)-d_{i}\right)^{2}=\frac{1}{2}\|Z w-d\|^{2}=\frac{1}{2}(Z w-d)^T(Z w-d)
+  ~ 
+  Con ayuda de la sección correspondiente del articulo y lo anterior. Escribe $Z$, $w$ y $d$ para el ejemplo antes planteado. A este
+  punto debe de quedar clara la equivalencia entre la suma y la forma matricial.
+  
+  La sección va en esta dirección,  se busca encontrar $w$ que minimice la expresión del error. Así, si se hace una cambio de base o cualquier
+  trasformación de esta en $\mathbb{R}^n$ se vera reflejado en la correspondiente base de polinomios y viceversa. Observemos que queremos minimizar
+  una forma cuadrática en $w$. 
+i. Explica las Figuras [#fig-R04_4], [#fig-R04_5] y [#fig-R04_6].  Resume las conclusiones de la sección correspondiente. La mejor forma de entender es 
+manipular los elementos  gráficos de las aplicaciones. Además recuerda que siempre puedes buscar información adicional.  
+
+~ Figure { #fig-R04_4; caption: "Combinación lineal base cánonica" }
+![R04_4]
+~
+
+~ Figure { #fig-R04_5; caption: "Combianción lineal eigenbase" }
+![R04_5]
+~
+
+~ Figure { #fig-R04_6; caption: "Combiación lineal eigenbase" }
+![R04_6]
+~
+
+
+  [momentum]: https://distill.pub/2017/momentum/
+  
+  [^nota1]: Valores aproximados, pues hay un error en la visualización inicial que indican $\alpha = 0.02$, $\beta = 0.99$, si se intenta probar con los valores corregidos se aproxima a la Figura mostrada inicialmente en la aplicación
+  [^nota]:  La segunda prte del articulo se entregará en el siguiente reporte
+  [^nota2]: La diferencia entre la aproximación $w^k$ (en el paso $k$) y el mínimo $w^{\star}$ 
+  [^nota3]: De ahi se desprende que $\alpha<2/\lambda_{max}$, visto en clase
+
+
+# Problema 2 (50 puntos){-}
+
+
+Ingresa al siguiente curso [Introduction to Machine Learning](https://openlearninglibrary.mit.edu/courses/course-v1:MITx+6.036+1T2019/about)[^mit]. 
+Revisa la información ubicada en  **Week 4: Margin Maximization.** Es necesario decir que no se vale revisar las soluciones &#128516;. 
+Pero si puedes comprobar las veces que sea necesario tu resultado con la herramienta proporcionada en la plataforma &#128512;.
+No se supervisa la revisión del material indicado, pero ojalá esta se realice.
+
+La entrega consiste en 
+
+i. Resolver Week 4 Exercises. Los resultados de tu calificación en la plataforma, deben de poderse visualizar dentro de one-note.
+
+i. Resolver Week 4 Lab. Los resultados de tu calificación en la plataforma, deben de poderse visualizar dentro de one-note.
+
+
+[^mit]: La creación de una cuenta e ingresar al curso es gratis
+[poli]: images/poli.JPG "poli" { width: 10% }
+[R04_1]:images/R04_1.png { width: 100% }
+[R04_2]:images/R04_2.png { width: 100% }
+[R04_3]:images/R04_3.png { width: 100% }
+[R04_4]:images/R04_4.png { width: 100% }
+[R04_5]:images/R04_5.png { width: 100% }
+[R04_6]:images/R04_6.png { width: 100% }
