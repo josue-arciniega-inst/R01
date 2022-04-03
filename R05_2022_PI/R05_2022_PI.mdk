@@ -1,0 +1,150 @@
+Title         :  ![poli]<br> IPN-UPIITA  
+Sub Title     : Redes Neuronales
+Title Note    : Reporte R05
+Author        : Dr. Rafael Martínez Martínez
+Affiliation   : Academia de sistemas
+Email         : ramartinezr@ipn.mx
+Logo          : False
+Bibliography: bibliografia.bib
+Bib style     : chicago
+Cite Style: natural
+Math Mode: static
+Math Embed: 100
+Math Dpi: 299
+@html Bib Search Url: www.google.com
+
+Math {overflow:scroll}
+Equation {overflow:scroll}
+
+name-references: Bibliografía
+name-contents: Contenido
+name-figure: Figura
+
+name-theorem: Teorema
+
+Locale: (spanish)
+
+
+Doc class     : [10pt]article
+
+[TITLE] 
+
+
+___
+Instrucciones:<br>
+  ~  + Cada problema/ejercicio debe tener procedimiento ordenado y completo que justifique adecuadamente la respuesta anotada. <br>
+  ~  + Si falta el procedimiento o este no justifica la respuesta anotada entonces el problema vale 0 puntos aunque la respuesta sea correcta.
+___
+
+[TOC]
+
+
+# Problema 1 (30 puntos) {-}
+
+
+Antes de retomar el reporte anterior, consulta este [documento][ecuendif] y responde las siguientes preguntas
+
+i. Dada la matriz del sistema
+  ~ Math
+  A=\begin{pmatrix}
+  a_{11}&a_{12}\\
+  a_{21}&a_{22}
+  \end{pmatrix} 
+ ~
+deduce una expresión para sus valores propios $\lambda_1$ y $\lambda_2$ en términos de sus elementos.
+ 
+i. Como  $\operatorname{traza}(A)=a_{11} + a_{22}$ y $\operatorname{det(A)}=a_{11}a_{22}-a_{12}a_{21}$. Escribe a los valores propios de $A$
+en términos de su traza y su determinante
+
+i. De acuerdo al plano **Traza-Determinante**, simula un sistema cuyos valores conjuntos de traza y determinante caigan en la región I. 
+Simula otro sistema donde los valores caigan en la región II. De forma parecida a los ejemplos presentados para valores en la región
+III y IV, ¿cómo clasificarias a los sistemas que caigan en la región I y los que caigan en la región II? 
+(no es necesario entregar las simulaciones)  
+
+   [ecuendif]: https://rafneta.github.io/RN/Clases/html/EcuEnDif/EcuEnDifm.html
+
+# Problema 2 (70 puntos) {-}
+
+
+Retomamos el articulo: [Why Momentum Really Works][momentum]. Con el fin de hacer menos extensa la revisión, se ha decidido omitir dos secciones
+
+- _The Critical Damping Coefficient_. Donde para valores pequeños de $\alpha$, se puede ver que la dinámica de momentum coincide
+con la discretización de un oscilador armónico amortiguado (sistema físico de dos estados, puede pensarse en un circuito eléctrico: 
+resistencia-capacitor-inductor, aunque en la sección se aborda el ejemplo mecánico: masa-resorte-amortiguador en los estados de posición
+ y velocidad)
+ 
+- _Example: The Colorization Problem_. Problema que se resuelve planteando la optimización de una función. Al resolver de forma númerica,
+ el algoritmo de momentum acelera la convergencia respecto a el algoritmo de gradiente descendiente. 
+
+Contesta las siguientes preguntas
+
+i. Al realizar un cambio de base en la dinámica de momentum, para una forma cuadrática, se obtiene:
+ ~Math
+\begin{aligned}
+y_{i}^{k+1} &=\beta y_{i}^{k}+\lambda_{i} x_{i}^{k} \\
+x_{i}^{k+1} &=x_{i}^{k}-\alpha y_{i}^{k+1}
+\end{aligned}   
+~
+ Hay una dependencia del lado derecho de la actualización actual (iteración $k+1$) en la variable $y$, para que se pueda utilizar 
+ lo consultado en el problema 1 es necesario que la dependencia del lado derecho en las dos variables solo sea en la actualización
+ anterior (iteración $k$). Para este fin se realizan las operaciones descritas en la nota 3 (sustituir en la segunda ecuación
+ $y_{i}^{k+1} =\beta y_{i}^{k}+\lambda_{i} x_{i}^{k}$ y despejar). Una vez que esto quede claro, basta
+ convencerse de la formula de iteración. 
+ 
+ ~Math
+ \left(\begin{array}{c}
+y_{i}^{k} \\
+x_{i}^{k}
+\end{array}\right)=R^{k}\left(\begin{array}{c}
+y_{i}^{0} \\
+x_{i}^{0}
+\end{array}\right) \quad R=\left(\begin{array}{cc}
+\beta & \lambda_{i} \\
+-\alpha \beta & 1-\alpha \lambda_{i}
+\end{array}\right)
+ ~
+ 
+ Con lo anterior y el contenido de la sección correspondiente explica la Figura [#fig-R05_1] 
+ ~ Figure { #fig-R05_1; caption: "Comportamiento de la dinámica de Momentum en una forma cuadrática" }
+![R05_1]
+~
+
+i. Para la convergencia del algoritmo momentum en una forma cuadrática se necesita que  
+$\max \left\{\left|\sigma_{1}\right|,\left|\sigma_{2}\right|\right\}<1$. Escribe estas condiciones en términos de $\alpha$,
+$\beta$ y los valores propios $\lambda_i$ de la matriz $A$ de la forma cuadrática.  
+
+i. Escribe los valores de $\alpha$ y $\beta$ para tener una tasa de convergencia óptima, así como el valor de tasa de convergencia óptima.
+ 
+i.  Explica la Figura [#fig-R05_2] 
+
+ ~ Figure { #fig-R05_2; caption: "Error de evaluación  en la dinámica de Momentum en una forma cuadrática" }
+![R05_2]
+~
+
+i. Escribe la forma de actualización de los **métodos lineales de primer orden** así como la lista de los nombre de estos métodos 
+comentados en el articulo. 
+
+i.  Explica la Figura [#fig-R05_3] 
+
+ ~ Figure { #fig-R05_3; caption: "Descomposición del error de evaluación en la dinámica de Momentum en una forma cuadrática" }
+![R05_3]
+~
+
+i. Reporta tus conclusiones generales del articulo (no olvides mencionar tu trabajo del reporte anterior)
+
+  [momentum]: https://distill.pub/2017/momentum/
+
+
+
+
+
+
+[poli]: images/poli.JPG "poli" { width: 10% }
+[R05_1]:images/R05_1.png { width: 100% }
+[R05_2]:images/R05_2.png { width: 100% }
+[R05_3]:images/R05_3.png { width: 100% }
+[R04_2]:images/R04_2.png { width: 100% }
+[R04_3]:images/R04_3.png { width: 100% }
+[R04_4]:images/R04_4.png { width: 100% }
+[R04_5]:images/R04_5.png { width: 100% }
+[R04_6]:images/R04_6.png { width: 100% }
