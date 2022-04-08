@@ -37,7 +37,7 @@ ___
 [TOC]
 
 
-# Problema 1 (10 puntos) {-}
+# Problema 1 (30 puntos) {-}
 
 Revisa el siguiente video[^video] y responde las preguntas correspondientes
 
@@ -51,7 +51,7 @@ i. De acuerdo a la explicación, ¿se utiliza incremental training o batching tr
 - Explica el fenómeno sobre el cual se concluye en la entrevista a la doctora Alisha
 
 
-# Problema 2 (10 puntos) {-}
+# Problema 2 (30 puntos) {-}
 
 Revisa el siguiente video[^video2] y responde la pregunta correspondiente
 
@@ -64,7 +64,7 @@ Revisa el siguiente video[^video2] y responde la pregunta correspondiente
 ¿En que consiste la separación en mini-grupos o mini-lotes y por qué es necesaria?
 
 
-# Problema 3 (20 puntos) {-}
+# Problema 3 (40 puntos) {-}
 
 Revisa el siguiente video[^video3]
 
@@ -80,21 +80,6 @@ para el entrenamiento.
 
 
 
-# Problema 4 (60 puntos) {-}
-
-Ingresa al siguiente curso [Introduction to Machine Learning](https://openlearninglibrary.mit.edu/courses/course-v1:MITx+6.036+1T2019/about)[^mit]. 
-Revisa la información de la  Week 6: Neural Networks I. Es necesario decir que no se vale revisar las soluciones &#128516;. 
-Pero si puedes comprabar las veces que sea necesario tu resultado con la herramienta porporcionada en la plataforma &#128512;. 
-No se supervisa la revisión del material inidcado, pero ojalá esta se realice.
-
-La entrega consite en:
-
- i. Resolver Week 6 Exercises: Neural Networks I, entrega los resultados calificados en la plataforma, dentro del archivo de one-note
-
- i. Resolver Week 6 Homework, entrega los resultados calificados en la plataforma, dentro del archivo de one-note
-
-
-[^mit]: La creación de una cuenta e ingresar al curso es gratis
 [poli]: images/poli.JPG "poli" { width: 10% }
 
 
