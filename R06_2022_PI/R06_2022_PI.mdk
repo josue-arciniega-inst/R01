@@ -1,0 +1,85 @@
+Title         :  ![poli]<br> IPN-UPIITA  
+Sub Title     : Redes Neuronales
+Title Note    : Reporte R06
+Author        : Dr. Rafael Martínez Martínez
+Affiliation   : Academia de sistemas
+Email         : ramartinezr@ipn.mx
+Logo          : False
+Bibliography: bibliografia.bib
+Bib style     : chicago
+Cite Style: natural
+Math Mode: static
+Math Embed: 100
+Math Dpi: 299
+@html Bib Search Url: www.google.com
+
+Math {overflow:scroll}
+Equation {overflow:scroll}
+
+name-references: Bibliografía
+name-contents: Contenido
+
+name-theorem: Teorema
+
+Locale: (spanish)
+
+
+Doc class     : [10pt]article
+
+[TITLE] 
+
+
+___
+Instrucciones:<br>
+  ~  + Cada problema/ejercicio debe tener procedimiento ordenado y completo que justifique adecuadamente la respuesta anotada. <br>
+  ~  + Si falta el procedimiento o este no justifica la respuesta anotada entonces el problema vale 0 puntos aunque la respuesta sea correcta.
+___
+[TOC]
+
+
+# Problema 1 (30 puntos) {-}
+
+Revisa el siguiente video[^video] y responde las preguntas correspondientes
+
+<div>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/mwHiaTrQOiI" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+  [^video]: Si prefieres puedes revisar la versión en inglés [enlace](https://youtu.be/IHZwWFHWa-w)
+
+i. De acuerdo a la explicación, ¿se utiliza incremental training o batching training, explica brevemente?
+- Explica el fenómeno sobre el cual se concluye en la entrevista a la doctora Alisha
+
+
+# Problema 2 (30 puntos) {-}
+
+Revisa el siguiente video[^video2] y responde la pregunta correspondiente
+
+<div>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/ScVpPS_CFYc" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+  [^video2]: Si prefieres puedes revisar la versión en inglés [enlace](https://youtu.be/Ilg3gGewQ5U)
+
+¿En que consiste la separación en mini-grupos o mini-lotes y por qué es necesaria?
+
+
+# Problema 3 (40 puntos) {-}
+
+Revisa el siguiente video[^video3]
+
+<div>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/CyPjDPKtycM" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+  [^video3]: Si prefieres puedes revisar la versión en inglés [enlace](https://youtu.be/tIeHLnjs5U8)
+
+De acuerdo al desarrollo planteado en el video, escribe el gradiente de la función de costo para una red de una entrada una salida, tres capas 
+ocultas, con una sola neurona en cada capa, cada neurona tiene desviación o sesgo. Considera $Q$ entradas con sus correspondientes salidas
+para el entrenamiento.
+
+
+
+[poli]: images/poli.JPG "poli" { width: 10% }
+
+
