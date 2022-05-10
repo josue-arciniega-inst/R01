@@ -1,6 +1,6 @@
 Title         :  ![poli]<br> IPN-UPIITA  
 Sub Title     : Redes Neuronales
-Title Note    : Reporte R06
+Title Note    : Reporte R07
 Author        : Dr. Rafael Martínez Martínez
 Affiliation   : Academia de sistemas
 Email         : ramartinezr@ipn.mx
@@ -37,64 +37,30 @@ ___
 [TOC]
 
 
-# Problema 1 (10 puntos) {-}
+# Problema 1 (100 puntos) {}
 
-Revisa el siguiente video[^video] y responde las preguntas correspondientes
+Revisa el siguiente [articulo](https://distill.pub/2020/understanding-rl-vision/) y responde las preguntas correspondientes, se recomienda leer este reporte por completo, posteriormente revisar el artículo y responder las preguntas planteadas en este documento.
 
-<div>
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/mwHiaTrQOiI" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+## Conceptos
 
-  [^video]: Si prefieres puedes revisar la versión en inglés [enlace](https://youtu.be/IHZwWFHWa-w)
+i. ¿Qué es una técinica de interpretabilidad?
 
-i. De acuerdo a la explicación, ¿se utiliza incremental training o batching training, explica brevemente?
-- Explica el fenómeno sobre el cual se concluye en la entrevista a la doctora Alisha
+i. ¿Qué es un mapa procedural o proceduralmente generado? 
 
+i. ¿Qué es la función de valor y una politica? (Explica conceptualmente)
 
-# Problema 2 (10 puntos) {-}
+i. ¿Cómo podemos ver la funcion de valor y la política desde un punto de vista matemático y/o computacional?
 
-Revisa el siguiente video[^video2] y responde la pregunta correspondiente
+i. ¿Qué es la reducción de dimensionalidad?
 
-<div>
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/ScVpPS_CFYc" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+i. ¿Qué son los logits?
 
-  [^video2]: Si prefieres puedes revisar la versión en inglés [enlace](https://youtu.be/Ilg3gGewQ5U)
-
-¿En que consiste la separación en mini-grupos o mini-lotes y por qué es necesaria?
-
-
-# Problema 3 (20 puntos) {-}
-
-Revisa el siguiente video[^video3]
-
-<div>
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/CyPjDPKtycM" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
-  [^video3]: Si prefieres puedes revisar la versión en inglés [enlace](https://youtu.be/tIeHLnjs5U8)
-
-De acuerdo al desarrollo planteado en el video, escribe el gradiente de la función de costo para una red de una entrada una salida, tres capas 
-ocultas, con una sola neurona en cada capa, cada neurona tiene desviación o sesgo. Considera $Q$ entradas con sus correspondientes salidas
-para el entrenamiento.
-
-
-
-# Problema 4 (60 puntos) {-}
-
-Ingresa al siguiente curso [Introduction to Machine Learning](https://openlearninglibrary.mit.edu/courses/course-v1:MITx+6.036+1T2019/about)[^mit]. 
-Revisa la información de la  Week 6: Neural Networks I. Es necesario decir que no se vale revisar las soluciones &#128516;. 
-Pero si puedes comprabar las veces que sea necesario tu resultado con la herramienta porporcionada en la plataforma &#128512;. 
-No se supervisa la revisión del material inidcado, pero ojalá esta se realice.
-
-La entrega consite en:
-
- i. Resolver Week 6 Exercises: Neural Networks I, entrega los resultados calificados en la plataforma, dentro del archivo de one-note
-
- i. Resolver Week 6 Homework, entrega los resultados calificados en la plataforma, dentro del archivo de one-note
-
-
-[^mit]: La creación de una cuenta e ingresar al curso es gratis
 [poli]: images/poli.JPG "poli" { width: 10% }
 
+## Coin run model 
+i. ¿Con qué estímulos o reward cuenta el agente?
 
+i. Con base en el apéndice "C" ¿Existe en la arquitectura un MLP()?
+
+## Model analysis
+i. 
